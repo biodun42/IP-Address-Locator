@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --VeryDarkGray: hsl(0, 0%, 17%);
+  --DarkGray: hsl(0, 0%, 59%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+.top-sec {
+  width: 100%;
+  background-image: url("images/pattern-bg-desktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 0 1.5rem 0;
+}
+.top-sec h1 {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 1rem;
+  word-spacing: 5px;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  background-color: transparent;
+}
+form input[type="text"] {
+  width: 40%;
+  padding: 0.7rem 0 0.7rem 1rem;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 16px;
+}
+form input::placeholder {
+  color: var(--DarkGray);
+}
+form button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+button img {
+  background-color: black;
+  padding: 0.75rem;
+  border-radius: 0 10px 10px 0;
+}
+.ip-details {
+  background-color: white;
+  width: 90%;
+  max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 2rem;
+  border-radius: 15px;
+}
+.each-dt {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.each-dt p {
+  color: var(--DarkGray);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+}
+.each-dt h1 {
+  color: var(--VeryDarkGray);
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
+.bt-sec {
+  width: 100%;
+}
+#map {
+  height: calc(100vh - 300px);
+  width: 100%;
+  z-index: 0;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .ip-details {
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 582px) {
+  form {
+    width: 100%;
+  }
+  form input[type="text"] {
+    width: 100%;
+    padding: 0.7rem 0 0.7rem 1rem;
+  }
+  .ip-details {
+    flex-direction: column;
+  }
+  
+  .top-sec > h1 {
+    font-size: 25px;
+  }
+  .each-dt p{
+    text-decoration: underline;
+  }
+  .top-sec {
+    padding: 1rem 0 1rem 0;
+  }
+}
